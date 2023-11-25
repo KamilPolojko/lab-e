@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    display: grid;
+    ffont-family: 'Roboto Slab', serif;
+
+    min-height: 100vh;
+    grid-template-areas:
+        "a b b b c"
+        "a d d d c"
+        "a d d d c"
+        "e e e e e"
+
+    ;
+
+
+}
+
+h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-style: italic;
+    color: orange;
+}
+
+h2{
+    font-family: 'Roboto Slab', serif;
+    font-weight: bolder;
+    font-style: italic;
+    color: orange;
+}
+
+h3{
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-style: initial;
+    color: orange;
+}
+
+p{
+    font-family: 'Roboto Slab', serif;
+    text-indent: 20px;
+    text-transform: capitalize;
+}
+p:first-of-type{
+    color: aqua;
+}
+p:first-letter{
+    color: brown;
+}
+
+nav{
+
+
+    background-color: #111;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20%;
+
+    /*float: left;*/
+    /*width: 20%;*/
+    /*position: absolute;*/
+    /*height: 100%;*/
+    grid-area: a;
+}
+
+
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /*flex-direction: row;*/
+    /*justify-content: space-around;*/
+    text-align: center;
+    flex-wrap: wrap;
+    border: 2px solid orange;
+
+}
+
+
+
+nav ul li{
+    padding: 40px 30px;
+    position: relative;
+}
+
+
+nav ul li a{
+
+    padding: 12px;
+    color:  #ff6600;;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: all 0.3s;
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+nav ul li:hover .dropdown_menu{
+    display: block;
+    position: absolute;
+    left:0;
+    top: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown_menu ul{
+    list-style: none;
+    display: block;
+    margin: 10px;
+    padding: 0;
+}
+
+.dropdown_menu ul li{
+    width: auto;
+    padding: 10px;
+
+}
+
+.dropdown_menu li {
+    padding: 10px;
+    text-align: center;
+}
+
+
+header{
+    background-image: url("../legwan.jpg");
+    background-size: 550px;
+    background-color: #ff6600;
+    text-align: center;
+    grid-area: b;
+
+}
+
+aside{
+    width: auto;
+    height: auto;
+    background-color: #111;
+    color: whitesmoke;
+    float: right;
+    grid-area: c;
+}
+main{
+    background-color: #222;
+    padding: 10px;
+    grid-area: d;
+    color: whitesmoke;
+    min-height: 50vh;
+}
+
+footer{
+    background-color: #ff6600;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    grid-area: e;
+}
+
+a{
+    color: white;
+}
+
+#btn1:visited {
+    color:yellow;
+}
+
+@media (max-width: 360px) and (max-width: 740px) {
+    body{
+        grid-template-areas:
+"a b b b c"
+"a d d d c"
+"a d d d c"
+"e e e e e"
+
+    ;
+    }
+
+
+
+}
+
